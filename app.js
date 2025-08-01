@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // IMPORTANT: Replace this with your actual n8n Production Webhook URL
-    const n8nWebhookUrl = 'https://esh1991.app.n8n.cloud/webhook/868888f9-3bc4-40dc-b8b7-254302b46576';
+    const n8nWebhookUrl = 'https://esh1991.app.n8n.cloud/webhook-test/868888f9-3bc4-40dc-b8b7-254302b46576';
 
     // A function to handle the form submission logic
     const handleFormSubmit = (event, emailInput, messageElement) => {
