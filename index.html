@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat2Sheet | Turn Chat Messages into Spreadsheets</title>
+    <title>Chat2Sheet | Turn WhatsApp & Telegram Messages into Spreadsheets</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,19 +11,26 @@
 </head>
 <body>
     
-    <div class="top-bar">
-        <div class="container">
-            <span>✅ For Small Businesses</span>
-            <span>✅ For Freelancers</span>
-            <span>✅ For You</span>
-        </div>
-    </div>
+    <!-- HEADER & NEW NAVIGATION BAR -->
+    <header class="main-header">
+        <nav class="container">
+            <a href="#" class="logo-link">
+                <img src="chat2sheet.png" alt="Chat2Sheet Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#" class="nav-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- HERO SECTION -->
-    <header class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Turn Chat Messages Into Spreadsheets. Instantly.</h1>
+                <h1>Turn your WhatsApp or Telegram messages into clean, structured spreadsheets. Instantly.</h1>
                 <p>Messy text? Voice notes? Order updates? Just send it — Chat2Sheet uses AI to format, extract, and log it into your Google Sheet.</p>
                 <form id="waitlist-form-hero" class="waitlist-form">
                     <input type="email" id="email-hero" placeholder="Your email address" required>
@@ -32,31 +39,27 @@
                 <p id="form-message-hero" class="form-message"></p>
             </div>
             <div class="hero-visual">
-                <!-- UPDATED: Now references your local hero.png file -->
                 <img src="hero.png" alt="Animation showing data moving from a chat app to a spreadsheet">
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- HOW IT WORKS SECTION -->
-    <section class="how-it-works">
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
             <h2>How It Works</h2>
             <div class="steps">
                 <div class="step">
-                    <!-- UPDATED: Now references your local messageit.png file -->
                     <img src="messageit.png" alt="Message It Icon" class="step-icon">
-                    <h3>1. Send a Message</h3>
-                    <p>Share updates in plain English via WhatsApp or Telegram. (Text, voice notes, even shorthand!)</p>
+                    <h3>1. Message It</h3>
+                    <p>Send any message via WhatsApp or Telegram. No formatting rules needed.</p>
                 </div>
                 <div class="step">
-                    <!-- UPDATED: Now references your local aiicon.png file -->
                     <img src="aiicon.png" alt="AI Icon" class="step-icon">
                     <h3>2. Let AI Do the Work</h3>
                     <p>We clean it, structure it, and extract key fields like dates, amounts, and names.</p>
                 </div>
                 <div class="step">
-                    <!-- UPDATED: Now references your local spreadsheet.png file -->
                     <img src="spreadsheet.png" alt="Spreadsheet Icon" class="step-icon">
                     <h3>3. See It in Your Sheet</h3>
                     <p>Everything is neatly logged in real-time to your connected Google Sheet.</p>
@@ -65,17 +68,68 @@
         </div>
     </section>
     
-    <!-- PERFECT FOR SECTION -->
+    <!-- PERFECT FOR SECTION - NEW CAROUSEL STYLE -->
     <section class="perfect-for">
         <div class="container">
-             <h2>Perfect For...</h2>
-            <ul>
-                <li>✅ Small business owners tracking daily sales</li>
-                <li>✅ Freelancers logging work, invoices, or payments</li>
-                <li>✅ Field agents sending client updates</li>
-                <li>✅ Personal habit or expense tracking</li>
-                <li>✅ Anyone who hates typing into spreadsheets</li>
-            </ul>
+            <h2>Made for People Who Get Things Done</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Card 1: The Template -->
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <img src="https://i.pravatar.cc/80?u=amanda" alt="Amanda, part-time baker">
+                            <div>
+                                <h3>Amanda, the Baker</h3>
+                                <span>Takes orders on the go</span>
+                            </div>
+                        </div>
+                        <div class="persona-body">
+                            <div class="challenge">
+                                <h4>The Challenge</h4>
+                                <p>"My hands are always covered in flour when customers call. I scribble orders on scrap paper and often lose them."</p>
+                            </div>
+                            <div class="solution">
+                                <h4>The Chat2Sheet Way</h4>
+                                <p>"Now I just send a quick voice note to my Chat2Sheet number. The order, amount, and customer name are logged before I even wash my hands."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Placeholder -->
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <img src="https://i.pravatar.cc/80?u=david" alt="David, freelance designer">
+                            <div>
+                                <h3>David, the Designer</h3>
+                                <span>Tracks payments & projects</span>
+                            </div>
+                        </div>
+                         <div class="persona-body">
+                            <div class="challenge"><h4>The Challenge</h4><p>Placeholder for David's challenge with tracking payments...</p></div>
+                            <div class="solution"><h4>The Chat2Sheet Way</h4><p>Placeholder for how David easily logs invoices...</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Placeholder -->
+                     <div class="persona-card">
+                        <div class="persona-header">
+                            <img src="https://i.pravatar.cc/80?u=maria" alt="Maria, field agent">
+                            <div>
+                                <h3>Maria, the Field Agent</h3>
+                                <span>Updates client records</span>
+                            </div>
+                        </div>
+                        <div class="persona-body">
+                            <div class="challenge"><h4>The Challenge</h4><p>Placeholder for Maria's challenge with updating records from the field...</p></div>
+                            <div class="solution"><h4>The Chat2Sheet Way</h4><p>Placeholder for how Maria sends quick text updates...</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button prev">←</button>
+                    <button class="carousel-button next">→</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -92,11 +146,14 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- UPDATED FOOTER -->
     <footer>
         <div class="container">
-            <p>Built for small businesses, solo workers, and the spreadsheet-haters.</p>
-            <p>Contact: chat2sheet@gmail.com | Terms & Privacy</p>
+            <div class="social-proof">
+                <span>As featured in (placeholders)</span>
+                <p>TechCrunch  /  Forbes  /  Indie Hackers</p>
+            </div>
+            <p class="copyright">© 2025 Chat2Sheet. All Rights Reserved.</p>
         </div>
     </footer>
 
