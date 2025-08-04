@@ -243,5 +243,86 @@ footer {
     .persona-body { grid-template-columns: 1fr; }
 }
 
+/* --- PRICING PAGE STYLES --- */
+.pricing-page .pricing-subtitle, .faq-page .faq-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+.pricing-table-container {
+    overflow-x: auto; /* For responsiveness on small screens */
+}
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+.pricing-table th {
+    font-size: 1.2rem;
+}
+.pricing-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+.price-row td {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.price-row small {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--light-text);
+}
+.pricing-table .section-header td {
+    background-color: var(--background-light);
+    font-weight: 700;
+    text-align: left;
+    color: var(--hero-bg);
+}
+.pricing-table small {
+    color: var(--light-text);
+}
+
+/* --- FAQ PAGE STYLES --- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-container details {
+    background: var(--background-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+}
+.faq-container summary {
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+}
+.faq-container summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.faq-container details[open] summary::after {
+    transform: rotate(45deg);
+}
+.faq-container details p {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    color: var(--light-text);
+}
 
 
