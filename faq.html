@@ -30,23 +30,47 @@
             <p class="faq-subtitle">Have questions? We've got answers.</p>
 
             <div class="faq-container">
-                <details>
-                    <summary>How does the AI know what to extract?</summary>
-                    <p>Our AI is trained to recognize common data points like names, dates, amounts, and keywords. When you set up a sheet, it understands the columns and looks for that specific information in your messages. For multiple sheets/tabs, you can use simple keywords like #sales or #expenses to direct the data.</p>
-                </details>
-                <details>
-                    <summary>Is my data secure?</summary>
-                    <p>Absolutely. We use end-to-end encryption for all messages. Your data is processed securely and sent directly to your own Google Sheet. We do not store the content of your messages on our servers after they have been processed.</p>
-                </details>
-                <details>
-                    <summary>What happens if I send a message with missing information?</summary>
-                    <p>The system is designed to be helpful. If you send a message like "sales of $50" but your sheet requires a client name, the Chat2Sheet bot will reply to you on WhatsApp/Telegram asking for the missing detail before logging the data.</p>
-                </details>
-                <details>
-                    <summary>Can I connect more than one Google Sheet?</summary>
-                    <p>Yes! Our Pro and Business plans allow you to connect unlimited Google Sheets. You can use keywords in your messages (e.g., `#work` or `#personal`) to tell the AI which sheet to send the data to.</p>
-                </details>
-            </div>
+    <details open>
+        <summary>How does the AI know what to extract from my messages?</summary>
+        <p>Our AI is trained to recognize common data points like names, dates, amounts, and descriptions. When you connect your Google Sheet, the AI reads your column headers (e.g., "Client," "Amount," "Status") to understand the specific structure you need. It then intelligently hunts for that information in your messages, no special formatting required.</p>
+    </details>
+    <details>
+        <summary>Is my data secure?</summary>
+        <p>Absolutely. Security is our top priority. Your connection to our service uses end-to-end encryption. The content of your messages is processed in memory and sent directly to your own private Google Sheet. We do not permanently store the content of your messages on our servers after they have been successfully logged.</p>
+    </details>
+    <details>
+        <summary>What happens if I send a message with missing information?</summary>
+        <p>The system is designed to be helpful, not rigid. If you send a message like "sales of $50" but your sheet requires a client name, the Chat2Sheet bot will reply to you directly in WhatsApp or Telegram asking for the missing detail before logging the data.</p>
+    </details>
+    <details>
+        <summary>Can I connect more than one Google Sheet or tab?</summary>
+        <p>Yes! Our Pro and Business plans allow you to connect unlimited Google Sheets or tabs. You can easily direct data by using a simple keyword at the start of your message, like `#work`, `#expenses`, or `#leads`. You define these keywords yourself during setup.</p>
+    </details>
+    <details>
+        <summary>What messaging apps does this work with?</summary>
+        <p>For our initial launch, we are fully integrated with WhatsApp. We plan to add support for Telegram shortly after. Sign up to our waitlist to be notified when new integrations are available!</p>
+    </details>
+    <details>
+        <summary>Do I have to type my messages in a specific way?</summary>
+        <p>Not at all. The beauty of Chat2Sheet is that you can write naturally. "Just got paid $250 from Acme Inc for the logo design" works just as well as "Acme Inc, $250, logo design, paid." The AI is built to understand human language, not computer commands.</p>
+    </details>
+    <details>
+        <summary>What if the AI makes a mistake?</summary>
+        <p>While our AI is highly accurate, mistakes can occasionally happen. We are building a simple correction command, like `#fix`, that will allow you to quickly delete the last entry so you can send it again. Our goal is to make fixing an error as easy as sending a message.</p>
+    </details>
+    <details>
+        <summary>Can my team members send updates to the same sheet?</summary>
+        <p>Yes. The Business plan is designed specifically for this. You can invite multiple team members, and they can all send updates from their own WhatsApp numbers to a single, centralized Google Sheet, making it perfect for tracking team sales, field reports, or project updates.</p>
+    </details>
+    <details>
+        <summary>What happens if I go over my plan's message limit?</summary>
+        <p>We'll notify you via WhatsApp and email once you reach 80% of your monthly message limit. If you go over, we will send you a final notification with a link to easily upgrade your plan. We will not stop processing your messages unexpectedly.</p>
+    </details>
+    <details>
+        <summary>Can I use this for voice notes or images?</summary>
+        <p>This is one of our most requested features and it's on our high-priority roadmap! The ability to process voice notes (for hands-free updates) and images (for receipts or handwritten notes) will be coming soon as a premium feature for our paid plans.</p>
+    </details>
+</div>
         </div>
     </section>
 
