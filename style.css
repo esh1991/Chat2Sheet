@@ -97,10 +97,10 @@ nav.container {
     gap: 40px;
 }
 
-.hero-content { flex: 0.8; }
+.hero-content { flex: 0.9; }
 .hero-content h1 { color: var(--white); }
 .hero-content p { font-size: 1.1rem; color: #E0E7FF; margin-bottom: 30px; }
-.hero-visual { flex: 1.2; }
+.hero-visual { flex: 1.1; }
 .hero-visual img { max-width: 100%; height: auto; filter: drop-shadow(0 0 30px rgba(76, 81, 191, 0.4)); }
 
 /* Waitlist Form */
@@ -367,6 +367,7 @@ footer {
     margin: 0;
     color: var(--light-text);
 }
+
 
 
 
