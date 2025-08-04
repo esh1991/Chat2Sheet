@@ -108,5 +108,31 @@
          <p id="form-message-cta" class="form-message"></p>
     </div>
 </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.getElementById('pricing-toggle');
+        const proPrice = document.getElementById('price-pro');
+        const businessPrice = document.getElementById('price-business');
+        const monthlyLabel = document.querySelector('.toggle-container span:first-of-type');
+        const annuallyLabel = document.querySelector('.toggle-container span:last-of-type');
+
+        // Set initial state
+        monthlyLabel.classList.add('active');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) { // Annual pricing
+                proPrice.innerHTML = '$120 / year <span class="savings">Save $24</span>';
+                businessPrice.innerHTML = '$290 / year <span class="savings">Save $58</span>';
+                annuallyLabel.classList.add('active');
+                monthlyLabel.classList.remove('active');
+            } else { // Monthly pricing
+                proPrice.textContent = '$12 / month';
+                businessPrice.textContent = '$29 / month';
+                monthlyLabel.classList.add('active');
+                annuallyLabel.classList.remove('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
