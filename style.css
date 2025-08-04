@@ -119,87 +119,69 @@ nav.container {
 .step-icon { height: 80px; width: auto; }
 
 /* --- NEW "PERFECT FOR" CAROUSEL --- */
+
+/* --- NEW "PERFECT FOR" CAROUSEL --- */
 .perfect-for {
     background-color: var(--background-light);
 }
 
 .carousel-container {
     position: relative;
-    overflow: hidden;
-    max-width: 900px;
-    margin: 0 auto;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden; /* This hides the parts of the track that are off-screen */
 }
 
 .carousel-track {
     display: flex;
+    gap: 20px; /* Space between cards */
     transition: transform 0.5s ease-in-out;
 }
 
 .persona-card {
-    flex: 0 0 100%; /* Each card takes up 100% of the container width */
+    flex: 0 0 calc((100% / 3) - 20px); /* Shows 3 cards, adjusting for gap */
     background: var(--white);
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    margin: 0 20px; /* Provides spacing between cards if you show more than one */
-    padding: 30px;
+    padding: 25px; /* Slightly reduced padding */
     box-sizing: border-box;
 }
 
 .persona-header {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .persona-header img {
-    width: 80px;
-    height: 80px;
+    width: 60px; /* Smaller avatar */
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.persona-header h3 {
+.persona-header h3 { margin: 0; font-size: 1.1rem; }
+.persona-header span { color: var(--light-text); font-weight: 500; font-size: 0.9rem; }
+
+.persona-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.persona-body p {
+    font-size: 0.9rem; /* Smaller text */
     margin: 0;
 }
 
-.persona-header span {
-    color: var(--light-text);
-    font-weight: 500;
-}
-
-.persona-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.challenge, .solution {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.challenge {
-    background-color: #FFFBEB; /* Light yellow */
-    border: 1px solid #FDE68A;
-}
-
-.solution {
-    background-color: #F0FDF4; /* Light green */
-    border: 1px solid #A7F3D0;
-}
-
-.challenge h4 {
-    color: #B45309;
-    margin-top: 0;
-}
-
-.solution h4 {
-    color: #065F46;
-    margin-top: 0;
-}
+.challenge, .solution { padding: 15px; border-radius: 8px; }
+.challenge { background-color: #FFFBEB; border: 1px solid #FDE68A; }
+.solution { background-color: #F0FDF4; border: 1px solid #A7F3D0; }
+.challenge h4 { color: #B45309; margin: 0 0 5px 0; font-size: 0.95rem; }
+.solution h4 { color: #065F46; margin: 0 0 5px 0; font-size: 0.95rem; }
 
 .carousel-buttons {
     text-align: center;
@@ -207,28 +189,10 @@ nav.container {
 }
 
 .carousel-button {
-    background: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: all 0.3s ease;
+    background: var(--white); border: 1px solid var(--border-color); border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; cursor: pointer; margin: 0 10px; transition: all 0.3s ease;
 }
-
-.carousel-button:hover {
-    background: var(--hero-bg);
-    color: var(--white);
-    border-color: var(--hero-bg);
-}
-
-.carousel-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
+.carousel-button:hover { background: var(--hero-bg); color: var(--white); border-color: var(--hero-bg); }
+.carousel-button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* --- Final CTA Section --- */
 .cta { background-color: var(--hero-bg); color: var(--white); text-align: center; }
@@ -273,4 +237,5 @@ footer {
     .waitlist-form { flex-direction: column; }
     .persona-body { grid-template-columns: 1fr; }
 }
+
 
