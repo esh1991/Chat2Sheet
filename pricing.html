@@ -25,97 +25,88 @@
         </nav>
     </header>
 
-    <section class="pricing-page">
-        <div class="container">
-            <h2>Choose the Plan That's Right for You</h2>
-            <p class="pricing-subtitle">Simple, transparent pricing. Cancel anytime.</p>
-            
-            <div class="pricing-table-container">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Free (Hobby)</th>
-                            <th>Pro (Freelancer)</th>
-                            <th>Business (Team)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Price -->
-                        <tr class="price-row">
-                            <td>Price</td>
-                            <td>$0</td>
-                            <td>$12 / month <small>(or $120/year)</small></td>
-                            <td>$29 / month <small>(or $290/year)</small></td>
-                        </tr>
-                        <!-- Messages -->
-                        <tr>
-                            <td>Messages / Month</td>
-                            <td>Up to 15 messages</td>
-                            <td>Up to 200 messages</td>
-                            <td>Up to 600 messages</td>
-                        </tr>
-                        <!-- Users -->
-                        <tr>
-                            <td>Users</td>
-                            <td>1 User</td>
-                            <td>1 User</td>
-                            <td>Includes 3 Users <small>($8/mo per additional user)</small></td>
-                        </tr>
-                        <!-- Destinations -->
-                        <tr>
-                            <td>Destinations</td>
-                            <td>1 Google Sheet / Tab</td>
-                            <td>Unlimited Sheets / Tabs <small>(via keywords)</small></td>
-                            <td>Unlimited Sheets / Tabs</td>
-                        </tr>
-                        <!-- Core Features -->
-                        <tr class="section-header"><td colspan="4">Core Features</td></tr>
-                        <tr>
-                            <td>AI-Powered Text Parsing</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                        </tr>
-                        <tr>
-                            <td>WhatsApp & Telegram Sync</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                        </tr>
-                        <!-- Premium Features -->
-                        <tr class="section-header"><td colspan="4">Premium Features</td></tr>
-                        <tr>
-                            <td>Voice Note Transcription</td>
-                            <td>❌</td>
-                            <td>✅ <small>*</small></td>
-                            <td>✅ <small>*</small></td>
-                        </tr>
-                        <tr>
-                            <td>Image & Receipt Scanning</td>
-                            <td>❌</td>
-                            <td>✅ <small>*</small></td>
-                            <td>✅ <small>*</small></td>
-                        </tr>
-                        <tr>
-                            <td>Correction & Edit Commands</td>
-                            <td>❌</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                        </tr>
-                        <!-- Support -->
-                        <tr class="section-header"><td colspan="4">Support</td></tr>
-                        <tr>
-                            <td>Support</td>
-                            <td>Community Support</td>
-                            <td>Email Support</td>
-                            <td>Priority Email & Chat Support</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+<section class="pricing-page">
+    <div class="container">
+        <h2>Choose the Plan That's Right for You</h2>
+        <p class="pricing-subtitle">Simple, transparent pricing. Cancel anytime.</p>
 
+        <!-- Toggle Switch -->
+        <div class="toggle-container">
+            <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="pricing-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>Annually (Save up to 16%)</span>
+        </div>
+        
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <!-- ... table header ... -->
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free (Hobby)</th>
+                        <th>Pro (Freelancer)</th>
+                        <th>Business (Team)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Price -->
+                    <tr class="price-row">
+                        <td>Price</td>
+                        <td id="price-free">$0</td>
+                        <td id="price-pro">$12 / month</td>
+                        <td id="price-business">$29 / month</td>
+                    </tr>
+                    <!-- ... rest of the table ... -->
+                    <tr>
+                        <td>Messages / Month</td>
+                        <td>Up to 15 messages</td>
+                        <td>Up to 200 messages</td>
+                        <td>Up to 600 messages</td>
+                    </tr>
+                    <tr>
+                        <td>Users</td>
+                        <td>1 User</td>
+                        <td>1 User</td>
+                        <td>Includes 3 Users <small>($8/mo per additional user)</small></td>
+                    </tr>
+                    <tr>
+                        <td>Destinations</td>
+                        <td>1 Google Sheet / Tab</td>
+                        <td>Unlimited Sheets / Tabs <small>(via keywords)</small></td>
+                        <td>Unlimited Sheets / Tabs</td>
+                    </tr>
+                    <tr class="section-header"><td colspan="4">Core Features</td></tr>
+                    <tr><td>AI-Powered Text Parsing</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>WhatsApp & Telegram Sync</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                    <tr class="section-header"><td colspan="4">Premium Features</td></tr>
+                    <tr><td>Voice Note Transcription</td><td>❌</td><td>✅ <small>*</small></td><td>✅ <small>*</small></td></tr>
+                    <tr><td>Image & Receipt Scanning</td><td>❌</td><td>✅ <small>*</small></td><td>✅ <small>*</small></td></tr>
+                    <tr><td>Correction & Edit Commands</td><td>❌</td><td>✅</td><td>✅</td></tr>
+                    <tr class="section-header"><td colspan="4">Support</td></tr>
+                    <tr><td>Support</td><td>Community Support</td><td>Email Support</td><td>Priority Email & Chat Support</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Callout -->
+        <p class="pricing-callout">*Additional features coming soon!</p>
+    </div>
+</section>
+
+<!-- FINAL CTA SECTION -->
+<section id="cta" class="cta">
+    <div class="container">
+        <h2>Ready to try it?</h2>
+        <p>Be one of the first to access Chat2Sheet and make your messaging apps your new data assistant.</p>
+        <form id="waitlist-form-cta" class="waitlist-form">
+            <input type="email" id="email-cta" placeholder="Your email address" required>
+            <button type="submit">Join the Waitlist</button>
+        </form>
+         <p id="form-message-cta" class="form-message"></p>
+    </div>
+</section>
 </body>
 </html>
