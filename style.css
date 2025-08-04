@@ -432,3 +432,9 @@ input:checked + .slider:before {
     font-weight: 600;
     color: var(--cta-green);
 }
+
+.price-row del {
+    color: #9CA3AF; /* A lighter, less aggressive grey */
+    margin-right: 8px; /* Adds a little space between the old and new price */
+    font-weight: 400; /* Makes the old price less prominent */
+}
