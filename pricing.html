@@ -55,9 +55,9 @@
                     <!-- Price -->
                     <tr class="price-row">
                         <td>Price</td>
-                        <td id="price-free">$0</td>
-                        <td id="price-pro">$12 / month</td>
-                        <td id="price-business">$29 / month</td>
+                        <td>$0</td>
+                        <td><span id="price-pro-text">$12 / month</span></td>
+                        <td><span id="price-business-text">$29 / month</span></td>
                     </tr>
                     <!-- ... rest of the table ... -->
                     <tr>
@@ -108,11 +108,12 @@
          <p id="form-message-cta" class="form-message"></p>
     </div>
 </section>
-    <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggle = document.getElementById('pricing-toggle');
-        const proPrice = document.getElementById('price-pro');
-        const businessPrice = document.getElementById('price-business');
+        // Target the new spans inside the cells
+        const proPriceText = document.getElementById('price-pro-text');
+        const businessPriceText = document.getElementById('price-business-text');
         const monthlyLabel = document.querySelector('.toggle-container span:first-of-type');
         const annuallyLabel = document.querySelector('.toggle-container span:last-of-type');
 
@@ -120,14 +121,22 @@
         monthlyLabel.classList.add('active');
 
         toggle.addEventListener('change', () => {
-            if (toggle.checked) { // Annual pricing
-                proPrice.innerHTML = '$120 / year <span class="savings">Save $24</span>';
-                businessPrice.innerHTML = '$290 / year <span class="savings">Save $58</span>';
+            if (toggle.checked) { // Annual pricing is selected
+                // The previous monthly total (12 * 12 = 144) with a strikethrough,
+                // followed by the new annual price.
+                proPriceText.innerHTML = '<del>$144</del> $120 / year';
+                
+                // The previous monthly total (29 * 12 = 348) with a strikethrough,
+                // followed by the new annual price.
+                businessPriceText.innerHTML = '<del>$348</del> $290 / year';
+
                 annuallyLabel.classList.add('active');
                 monthlyLabel.classList.remove('active');
-            } else { // Monthly pricing
-                proPrice.textContent = '$12 / month';
-                businessPrice.textContent = '$29 / month';
+            } else { // Monthly pricing is selected
+                // Revert back to the simple monthly price text.
+                proPriceText.textContent = '$12 / month';
+                businessPriceText.textContent = '$29 / month';
+                
                 monthlyLabel.classList.add('active');
                 annuallyLabel.classList.remove('active');
             }
