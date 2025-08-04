@@ -1,6 +1,6 @@
 /* General Styling & Variables */
 :root {
-    --hero-bg: #2C246E; /* Darker Indigo, closer to your image background */
+    --hero-bg: #2C246E;
     --cta-green: #10B981; 
     --dark-text: #1F2937;
     --light-text: #6B7280;
@@ -23,39 +23,65 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
+h1 { font-size: 2.8rem; line-height: 1.2; }
+h2 { text-align: center; font-size: 2.2rem; margin-bottom: 50px; }
+section { padding: 80px 0; }
+
+/* --- NEW HEADER & NAVIGATION --- */
+.main-header {
+    background: var(--hero-bg);
+    padding: 15px 0;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-section {
-    padding: 80px 0;
+.logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto;
 }
 
-/* Top Bar */
-.top-bar {
-    background-color: #E0E7FF;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #3730A3;
-}
-.top-bar span {
-    margin: 0 15px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
 }
 
-/* Hero Section - UPDATED with standard padding */
+.nav-links a {
+    text-decoration: none;
+    color: #E0E7FF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--white);
+}
+
+.nav-button {
+    background-color: var(--cta-green);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #059669;
+    color: var(--white) !important;
+}
+
+/* --- HERO SECTION --- */
 .hero {
     padding: 80px 0; 
     background-color: var(--hero-bg);
@@ -68,145 +94,179 @@ section {
     gap: 40px;
 }
 
-.hero-content {
-    flex: 1;
-}
-
-.hero-content h1 {
-    color: var(--white);
-}
-
-.hero-content p {
-    font-size: 1.1rem;
-    color: #E0E7FF;
-    margin-bottom: 30px;
-}
-
-/* Styling for Hero Image */
-.hero-visual {
-    flex: 1;
-}
-.hero-visual img {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 30px rgba(76, 81, 191, 0.4));
-}
+.hero-content { flex: 1; }
+.hero-content h1 { color: var(--white); }
+.hero-content p { font-size: 1.1rem; color: #E0E7FF; margin-bottom: 30px; }
+.hero-visual { flex: 1; }
+.hero-visual img { max-width: 100%; height: auto; filter: drop-shadow(0 0 30px rgba(76, 81, 191, 0.4)); }
 
 /* Waitlist Form */
-.waitlist-form {
-    display: flex;
-    gap: 10px;
-}
-.waitlist-form input {
-    flex-grow: 1;
-    padding: 15px;
-    border: 1px solid #6D28D9;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-.waitlist-form button {
-    background-color: var(--cta-green);
-    color: var(--white);
-    border: none;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.waitlist-form button:hover {
-    background-color: #059669;
-}
-.form-message {
-    margin-top: 10px;
-    font-weight: 600;
-}
+.waitlist-form { display: flex; gap: 10px; }
+.waitlist-form input { flex-grow: 1; padding: 15px; border: 1px solid #6D28D9; border-radius: 8px; font-size: 1rem; }
+.waitlist-form button { background-color: var(--cta-green); color: var(--white); border: none; padding: 15px 25px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease; }
+.waitlist-form button:hover { background-color: #059669; }
+.form-message { margin-top: 10px; font-weight: 600; }
 .form-message.success { color: #A7F3D0; }
 .form-message.error { color: #FECACA; }
 
+/* --- HOW IT WORKS SECTION --- */
+.how-it-works { background-color: var(--white); padding: 80px 0; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+.step h3 { font-size: 1.5rem; margin-top: 20px; }
+.step-icon { height: 80px; width: auto; }
 
-/* ALL WAVE DIVIDER CSS HAS BEEN REMOVED */
-
-
-/* How It Works Section - UPDATED with standard padding */
-.how-it-works {
-    background-color: var(--white);
-    padding: 80px 0; 
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    text-align: center;
-}
-
-.step h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-
-.step-icon {
-    height: 160px; /* You can adjust the icon size here */
-    width: auto;
-}
-
-/* Perfect For Section */
+/* --- NEW "PERFECT FOR" CAROUSEL --- */
 .perfect-for {
     background-color: var(--background-light);
 }
-.perfect-for ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 600px;
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
     margin: 0 auto;
-    font-size: 1.2rem;
-}
-.perfect-for li {
-    margin-bottom: 15px;
 }
 
-/* Final CTA Section */
-.cta {
-    background-color: var(--hero-bg);
-    color: var(--white);
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.persona-card {
+    flex: 0 0 100%; /* Each card takes up 100% of the container width */
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin: 0 20px; /* Provides spacing between cards if you show more than one */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.persona-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.persona-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.persona-header h3 {
+    margin: 0;
+}
+
+.persona-header span {
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.persona-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.challenge, .solution {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.challenge {
+    background-color: #FFFBEB; /* Light yellow */
+    border: 1px solid #FDE68A;
+}
+
+.solution {
+    background-color: #F0FDF4; /* Light green */
+    border: 1px solid #A7F3D0;
+}
+
+.challenge h4 {
+    color: #B45309;
+    margin-top: 0;
+}
+
+.solution h4 {
+    color: #065F46;
+    margin-top: 0;
+}
+
+.carousel-buttons {
     text-align: center;
-}
-.cta h2 {
-    color: var(--white);
-}
-.cta p {
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    color: #E0E7FF;
-}
-.cta .waitlist-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-.cta .waitlist-form button {
-    background-color: var(--cta-green);
-    color: var(--white);
-}
-.cta .waitlist-form button:hover {
-    background-color: #059669;
+    margin-top: 30px;
 }
 
-/* Footer */
+.carousel-button {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: var(--hero-bg);
+    color: var(--white);
+    border-color: var(--hero-bg);
+}
+
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* --- Final CTA Section --- */
+.cta { background-color: var(--hero-bg); color: var(--white); text-align: center; }
+.cta h2 { color: var(--white); }
+.cta p { max-width: 600px; margin: 0 auto 30px auto; color: #E0E7FF; }
+.cta .waitlist-form { max-width: 500px; margin: 0 auto; }
+.cta .waitlist-form button { background-color: var(--cta-green); color: var(--white); }
+.cta .waitlist-form button:hover { background-color: #059669; }
+
+/* --- NEW FOOTER --- */
 footer {
-    background-color: var(--white);
+    background-color: var(--background-light);
     text-align: center;
     padding: 40px 0;
     color: var(--light-text);
     border-top: 1px solid var(--border-color);
 }
+.social-proof {
+    margin-bottom: 20px;
+}
+.social-proof span {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.social-proof p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9CA3AF;
+    margin: 5px 0 0 0;
+}
+.copyright {
+    font-size: 0.9rem;
+}
 
-/* Responsive Design for Mobile */
+
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
+    .nav-links { display: none; } /* Simplifies nav on mobile, can add a hamburger menu later */
     .hero .container { flex-direction: column; }
     .steps { grid-template-columns: 1fr; gap: 60px; }
     .waitlist-form { flex-direction: column; }
-    .top-bar { display: none; }
+    .persona-body { grid-template-columns: 1fr; }
 }
