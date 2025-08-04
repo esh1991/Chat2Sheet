@@ -56,8 +56,8 @@
                     <tr class="price-row">
                         <td>Price</td>
                         <td>$0</td>
-                        <td><span id="price-pro-text">$12 / month</span></td>
-                        <td><span id="price-business-text">$29 / month</span></td>
+                        <td><span id="price-pro-text">$24 / month</span></td>
+                        <td><span id="price-business-text">$49 / month</span></td>
                     </tr>
                     <!-- ... rest of the table ... -->
                     <tr>
@@ -70,7 +70,7 @@
                         <td>Users</td>
                         <td>1 User</td>
                         <td>1 User</td>
-                        <td>Includes 3 Users <small>($8/mo per additional user)</small></td>
+                        <td>Includes 3 Users <small>($12/mo per additional user)</small></td>
                     </tr>
                     <tr>
                         <td>Destinations</td>
@@ -122,20 +122,20 @@
 
         toggle.addEventListener('change', () => {
             if (toggle.checked) { // Annual pricing is selected
-                // The previous monthly total (12 * 12 = 144) with a strikethrough,
+                // The previous monthly total (24 * 12 = 288) with a strikethrough,
                 // followed by the new annual price.
-                proPriceText.innerHTML = '<del>$144</del> $120 / year';
+                proPriceText.innerHTML = '<del>$288</del> $240 / year';
                 
-                // The previous monthly total (29 * 12 = 348) with a strikethrough,
+                // The previous monthly total (49 * 12 = 588) with a strikethrough,
                 // followed by the new annual price.
-                businessPriceText.innerHTML = '<del>$348</del> $290 / year';
+                businessPriceText.innerHTML = '<del>$588</del> $490 / year';
 
                 annuallyLabel.classList.add('active');
                 monthlyLabel.classList.remove('active');
             } else { // Monthly pricing is selected
                 // Revert back to the simple monthly price text.
-                proPriceText.textContent = '$12 / month';
-                businessPriceText.textContent = '$29 / month';
+                proPriceText.textContent = '$24 / month';
+                businessPriceText.textContent = '$49 / month';
                 
                 monthlyLabel.classList.add('active');
                 annuallyLabel.classList.remove('active');
