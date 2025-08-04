@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Chat2Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <a href="index.html" class="logo-link"> <!-- Points back to home -->
+                <img src="chat2sheet.png" alt="Chat2Sheet Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#how-it-works">How it works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" class="nav-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-page">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Have questions? We've got answers.</p>
+
+            <div class="faq-container">
+                <details>
+                    <summary>How does the AI know what to extract?</summary>
+                    <p>Our AI is trained to recognize common data points like names, dates, amounts, and keywords. When you set up a sheet, it understands the columns and looks for that specific information in your messages. For multiple sheets/tabs, you can use simple keywords like #sales or #expenses to direct the data.</p>
+                </details>
+                <details>
+                    <summary>Is my data secure?</summary>
+                    <p>Absolutely. We use end-to-end encryption for all messages. Your data is processed securely and sent directly to your own Google Sheet. We do not store the content of your messages on our servers after they have been processed.</p>
+                </details>
+                <details>
+                    <summary>What happens if I send a message with missing information?</summary>
+                    <p>The system is designed to be helpful. If you send a message like "sales of $50" but your sheet requires a client name, the Chat2Sheet bot will reply to you on WhatsApp/Telegram asking for the missing detail before logging the data.</p>
+                </details>
+                <details>
+                    <summary>Can I connect more than one Google Sheet?</summary>
+                    <p>Yes! Our Pro and Business plans allow you to connect unlimited Google Sheets. You can use keywords in your messages (e.g., `#work` or `#personal`) to tell the AI which sheet to send the data to.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
