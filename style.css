@@ -116,7 +116,7 @@ nav.container {
 .how-it-works { background-color: var(--white); padding: 80px 0; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
 .step h3 { font-size: 1.5rem; margin-top: 20px; }
-.step-icon { height: 160px; width: auto; }
+.step-icon { height: 200px; width: auto; }
 
 /* --- "PERFECT FOR" CAROUSEL (Reverted) --- */
 .perfect-for {
@@ -438,4 +438,5 @@ input:checked + .slider:before {
     margin-right: 8px; /* Adds a little space between the old and new price */
     font-weight: 400; /* Makes the old price less prominent */
 }
+
 
