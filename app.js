@@ -1,7 +1,7 @@
 // --- Waitlist Form Submission Logic (No changes needed here) ---
 document.addEventListener('DOMContentLoaded', () => {
     // IMPORTANT: Replace this with your actual n8n Production Webhook URL if needed
-    const n8nWebhookUrl = 'https://esh1991.app.n8n.cloud/webhook/868888f9-3bc4-40dc-b8b7-254302b46576';
+    const n8nWebhookUrl = 'https://n8n.srv1142500.hstgr.cloud/webhook/868888f9-3bc4-40dc-b8b7-254302b46576';
 
     const handleFormSubmit = (event, emailInput, messageElement) => {
         event.preventDefault();
@@ -92,3 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
         moveToSlide(0);
     }
 });
+
