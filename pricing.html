@@ -57,7 +57,7 @@
                         <td>Price</td>
                         <td>$0</td>
                         <td><span id="price-pro-text">$12 / month</span></td>
-                        <td><span id="price-business-text">$24 / month</span></td>
+                        <td><span id="price-business-text">$30 / month</span></td>
                     </tr>
                     <!-- ... rest of the table ... -->
                     <tr>
@@ -126,16 +126,16 @@
                 // followed by the new annual price.
                 proPriceText.innerHTML = '<del>$144</del> $120 / year';
                 
-                // The previous monthly total (24 * 12 = 288) with a strikethrough,
+                // The previous monthly total (30 * 12 = 360) with a strikethrough,
                 // followed by the new annual price.
-                businessPriceText.innerHTML = '<del>$288</del> $240 / year';
+                businessPriceText.innerHTML = '<del>$360</del> $300 / year';
 
                 annuallyLabel.classList.add('active');
                 monthlyLabel.classList.remove('active');
             } else { // Monthly pricing is selected
                 // Revert back to the simple monthly price text.
                 proPriceText.textContent = '$12 / month';
-                businessPriceText.textContent = '$24 / month';
+                businessPriceText.textContent = '$30 / month';
                 
                 monthlyLabel.classList.add('active');
                 annuallyLabel.classList.remove('active');
